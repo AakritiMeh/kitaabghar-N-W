@@ -2,14 +2,14 @@
 // import reactLogo from './assets/react.svg'
 // import viteLogo from '/vite.svg'
 import './App.css'
-import WagmiConfig from './WagmiConfig'
+import FileUploadToAi from './pages/FileUploadToAi'
 
 function App() {
   
 
   return (
     <>
-      <WagmiConfig />
+      <FileUploadToAi />
     </>
   )
 }
