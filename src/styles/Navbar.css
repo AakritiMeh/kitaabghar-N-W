@@ -1,0 +1,38 @@
+.NavbarMain {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 60px; /* Adjust as needed */
+}
+  
+.logo {
+    /* Fixed to the left */
+    flex-shrink: 0; /* Prevents logo from shrinking */
+}
+  
+.Buttons {
+    display: flex;
+    align-items: center;
+    gap: 80px; /* Even spacing between buttons */
+}
+  
+  /* If you want the buttons to be right-aligned within their container */
+.Buttons {
+    margin-left: auto;
+}
+  
+  /* Optional: Responsive design for smaller screens */
+@media (max-width: 768px) {
+    .NavbarMain {
+      flex-direction: column;
+      height: auto;
+      padding: 10px;
+    }
+  
+    .Buttons {
+      width: 100%;
+      justify-content: space-between;
+      margin-top: 10px;
+    }
+}
