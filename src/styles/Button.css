@@ -1,0 +1,26 @@
+.Buttonmain{
+    background-color: #0e76fd;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding:12px;
+    width:120px;
+    border:white border-box;
+    border-radius: 10px;
+    justify-content: center;
+}
+
+.buttontext{
+    text-align: center;
+    font-size: 16px;
+    color:white;
+    font-family:  ui-rounded, "SF Pro Rounded", "Segoe UI",  Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol" ;
+    font-style: normal;
+    font-weight: 600;
+}
+
+.Buttonmain:hover{
+    transform: scale(1.03);
+    transition: ease-out 0.2s;
+    cursor:pointer;    
+}
