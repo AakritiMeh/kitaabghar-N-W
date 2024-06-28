@@ -3,13 +3,14 @@
 // import viteLogo from '/vite.svg'
 
 import Navbar from './components/Navbar'
-
+import AboutUsPage from './pages/AboutUsPage'
 function App() {
   
 
   return (
     <>
       <Navbar />
+      <AboutUsPage />
     </>
   )
 }

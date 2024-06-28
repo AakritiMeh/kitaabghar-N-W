@@ -1,0 +1,46 @@
+.AboutUsPage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .heading {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #333;
+  }
+  
+  .People {
+    margin-top: 60px;
+  }
+  
+  .People > div:first-child {
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+  }
+  
+  .PeopleContainer {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  
+  .PeopleContainer > div {
+    width: 48%; /* Adjust as needed */
+    margin-bottom: 40px;
+  }
+  
+  @media (max-width: 768px) {
+    .PeopleContainer {
+      flex-direction: column;
+    }
+  
+    .PeopleContainer > div {
+      width: 100%;
+    }
+  }

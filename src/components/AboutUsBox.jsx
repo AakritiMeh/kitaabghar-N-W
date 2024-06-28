@@ -1,4 +1,4 @@
-
+import "../styles/AboutUsBox.css"
 import PropTypes from "prop-types";
 const AboutUsBox = ({Title,Description}) => {
   return (
