@@ -4,13 +4,14 @@
 import "./App.css"
 // import Navbar from './components/Navbar'
 // import AboutUsPage from './pages/AboutUsPage'
+import LandingPage from "./pages/LandingPage"
 import FileUploadToAi from "./pages/FileUploadToAi"
 function App() {
   
 
   return (
     <>
-
+    <LandingPage />
       <FileUploadToAi />
     </>
   )
