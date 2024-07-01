@@ -3,7 +3,7 @@
 // import viteLogo from '/vite.svg'
 import "./App.css"
 // import Navbar from './components/Navbar'
-// import AboutUsPage from './pages/AboutUsPage'
+import AboutUsPage from './pages/AboutUsPage'
 import LandingPage from "./pages/LandingPage"
 import FileUploadToAi from "./pages/FileUploadToAi"
 function App() {
@@ -13,6 +13,7 @@ function App() {
     <>
     <LandingPage />
       <FileUploadToAi />
+      <AboutUsPage />
     </>
   )
 }

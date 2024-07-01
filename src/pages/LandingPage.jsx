@@ -1,12 +1,15 @@
 import "../styles/LandingPage.css"
-const tagline="KitaabGhar: Hear, Learn, Own - Affordable Knowledge for All with AI-powered Animation"
+
 
 const WelcomeBox = () => {
   return (
     <div className="LandingMain">
         <div className="LandingContent">
             <div className="LandingHeading">WELCOME TO KITAABGHAR</div>
-            <div className="Landingdesc">{tagline}</div>
+            <div className="Landingdesc">
+            <div>Hear, Learn, Own - </div>
+            <div>Affordable Knowledge for All with AI-powered Animation</div>
+            </div>
         </div>
     </div>
   )

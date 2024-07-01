@@ -11,7 +11,7 @@ const AboutUsPage = () => {
         <AboutUsBox Title="What We Do?" Description={description}></AboutUsBox>
         <AboutUsBox Title="Why We Do?" Description={description}></AboutUsBox>
         <div className="People">
-            <div>Who We Are</div>
+            <div className="WhoWeAreHeading">Who We Are</div>
             <div className="PeopleContainer">
             <AboutUsBoxAakriti></AboutUsBoxAakriti>
             <AboutUsBoxAnsh></AboutUsBoxAnsh>
