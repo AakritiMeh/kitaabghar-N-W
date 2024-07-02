@@ -56,7 +56,18 @@ app.post("/initialize-user", (req, res) => {
     }
 
     console.log("User initialized successfully!");
-    res.status(200).json({ message: "User initialized successfully" });
+    res.status(200).json({ message: "User initialized successfully " });
+  });
+});
+
+app.get("/get-all-users", (req, res) => {
+  gun.get("users").once((data) => {
+    if (data && data.walletId) {
+      res.status(200).json({ walletIds: [data.walletId] });
+    } else {
+      res.status(404).json({ msg: "No wallet IDs found" });
+      console.log("No data or no wallet ID");
+    }
   });
 });
 
