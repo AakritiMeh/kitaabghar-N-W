@@ -15,8 +15,14 @@ function MaterialUpload() {
   }
 
   return (
-    <div className="MaterialUpload">
-      <input onChange={e=>uploadFile(e.target.files)} type="file" />
+    <div className="MaterialUploadMain">
+      <div className='MaterialUpload'>
+        <input onChange={e=>uploadFile(e.target.files)} type="file" />
+      </div>
+      <div>
+
+      </div>
+
     </div>
   )
 }
