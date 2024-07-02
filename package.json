@@ -15,6 +15,7 @@
     "@tanstack/react-query": "^5.48.0",
     "@web3modal/wagmi": "^5.0.3",
     "dotenv": "^16.4.5",
+    "gun": "^0.2020.1240",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "viem": "^2.16.2",
