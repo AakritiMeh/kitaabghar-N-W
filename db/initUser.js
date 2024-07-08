@@ -39,9 +39,10 @@ const app = express();
 const port = 8080;
 
 const gun = Gun();
-
+app.use(express.json());
 app.post("/initialize-user", (req, res) => {
-  const walletId = "";
+  let walletId;
+  walletId = req.body.walletId;
 
   if (!walletId) {
     return res
