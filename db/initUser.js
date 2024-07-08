@@ -43,14 +43,16 @@ app.use(express.json());
 app.post("/initialize-user", (req, res) => {
   let walletId;
   walletId = req.body.walletId;
-
+  console.log("I am sending a request");
   if (!walletId) {
     return res
       .status(400)
       .json({ message: "Missing walletId in request body" });
   }
+  console.log("checked wallet id");
 
-  gun.get("users").put({ walletId }, (ack) => {
+  gun.get("kitaabGhar").put({ walletId }, (ack) => {
+    console.log("inside gun.get");
     if (ack.err) {
       console.error("Error initializing user:", ack.err);
       return res.status(500).json({ message: "Internal server error" });
@@ -68,6 +70,29 @@ app.get("/get-all-users", (req, res) => {
     } else {
       res.status(404).json({ msg: "No wallet IDs found" });
       console.log("No data or no wallet ID");
+    }
+  });
+});
+
+app.get("/get-all-data", (req, res) => {
+  gun.get("kitaabGhar").once((data) => {
+    if (data) {
+      res.status(200).json({ datas: data });
+    } else {
+      res.status(404).json({ msg: "data not found" });
+      console.log("no data found");
+    }
+  });
+});
+
+app.post("/delete-users", () => {
+  gun.get("users").put(null, (ack) => {
+    if (ack.err) {
+      console.error("Error deleting users data:", ack.err);
+      // ... (handle error)
+    } else {
+      console.log("Users data tombstoned successfully!");
+      // ... (send success response)
     }
   });
 });
