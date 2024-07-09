@@ -25,15 +25,16 @@ app.post("/uploaded-files", (req, res) => {
     .get("kitaabGhar")
     .get(walletId)
     .get("uploadedFiles")
-    .put((ack) => {
+    .get(fileName)
+    .put(fileHash, (ack) => {
       console.log("inside gun.get");
       if (ack.err) {
-        console.error("Error initializing user:", ack.err);
+        console.error("Error adding doc:", ack.err);
         return res.status(500).json({ message: "Internal server error" });
       }
 
-      console.log("User initialized successfully!");
-      res.status(200).json({ message: "User initialized successfully " });
+      console.log("file added successfully!");
+      res.status(200).json({ message: "file added successfully " });
     });
 });
 
