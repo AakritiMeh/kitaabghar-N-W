@@ -15,7 +15,7 @@ function MaterialUpload() {
     fileLink='Visit at https://gateway.lighthouse.storage/ipfs/' + output.data.Hash;
     console.log(fileLink);
 
-    const response =axios.post('http://localhost:8080/uploaded-files', {
+    const response =await axios.post('http://localhost:8080/uploaded-files', {
       walletId,
       fileName,
       fileLink
@@ -24,7 +24,7 @@ function MaterialUpload() {
     if (response.status == 200) {
       console.log('File added successfully!');
     } else {
-      console.error("file not added");
+      console.log("file not added");
     }
   
   }
