@@ -21,7 +21,7 @@ function MaterialUpload() {
       fileLink
     });
 
-    if (response.status === 200) {
+    if (response.status == 200) {
       console.log('File added successfully!');
     } else {
       console.error("file not added");

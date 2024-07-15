@@ -1,23 +1,23 @@
 import "@rainbow-me/rainbowkit/styles.css";
 import { RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { WagmiProvider } from "wagmi";
+import { WagmiProvider, useAccount } from "wagmi";
 
 import { QueryClientProvider, QueryClient } from "@tanstack/react-query";
 import { ConnectButton } from "@rainbow-me/rainbowkit";
 import config from "./WagmiConfig";
 import { useEffect } from "react";
 import axios from "axios";
-import { useAccount } from 'wagmi';
+
+
 
 const queryClient = new QueryClient();
-const ConnectWallet = () => {
-  
-  const { address, isConnected, connector } = useAccount();
+const ConnectWallet = () => {  
+  const { address, isConnected, connector } = useAccount({config});
 
   useEffect(() => {
     const initUser = async (walletId) => {
       try {
-        const response = await axios.post('/initialize-user', {
+        const response = await axios.post('http://localhost:8080/initialize-user', {
           walletId
         }, {});
 

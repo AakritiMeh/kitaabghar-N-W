@@ -11,8 +11,8 @@ app.post("/uploaded-files", (req, res) => {
   walletId = req.body.walletId;
   let fileName;
   fileName = req.body.fileName;
-  let fileHash;
-  fileHash = req.body.fileHash;
+  let fileLink;
+  fileLink = req.body.fileLink;
 
   if (!walletId) {
     return res
@@ -26,7 +26,7 @@ app.post("/uploaded-files", (req, res) => {
     .get(walletId)
     .get("uploadedFiles")
     .get(fileName)
-    .put(fileHash, (ack) => {
+    .put(fileLink, (ack) => {
       console.log("inside gun.get");
       if (ack.err) {
         console.error("Error adding doc:", ack.err);
