@@ -1,8 +1,9 @@
-// import PropTypes from "prop-types"
+
 import "../styles/Navbar.css"
 import ConnectWallet from "./ConnectWallet"
 import Button from "./Button"
-const Navbar = () => {
+
+const Navbar = () => {  
   return (
     <div className="NavbarMain">
         <div className="logo"> <Button ButtonName="logo" /> </div>
