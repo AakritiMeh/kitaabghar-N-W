@@ -18,7 +18,7 @@ def Translate_to_func(text, lang='hi'):
     return translated.text  # Return the translated text
 
 def fetch_audio(text, option="FEMALE",lang="en-US"):
-    api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiNTNhMDdmMTUtZGY2OC00MGY1LThlOTctMzQwOWZlNGQ3MGIzIiwidHlwZSI6ImFwaV90b2tlbiJ9.Agsx4L1XtyLX-xKTEUPHEoN0kBqtuetLeoyLU8xoYvs"  # Replace with your actual API key
+    api_key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiYzE1Njk2ZjQtMjM3OS00NmJkLWFkY2EtZmFkZjhhODI1NDNiIiwidHlwZSI6ImFwaV90b2tlbiJ9.HkVsDYzUrupFDALwzb1kSei_mmCY2kHxjKLEEFJEcNU"
     headers = {"Authorization": f"Bearer {api_key}"}
     url = "https://api.edenai.run/v2/audio/text_to_speech"
     payload = {
@@ -54,7 +54,9 @@ def final_audio(text_doc,path="",lang=["en-US","en"]):
     text = text_doc.split(".")
     concatenated_audio1 = AudioSegment.empty()
     concatenated_audio2 = AudioSegment.empty()
-    beep_segment = AudioSegment.from_mp3("beep.wav")
+    beep=path+"beep.wav"
+    print(beep)
+    beep_segment = AudioSegment.from_mp3(beep)
     for i in text:
         if i=="@123":
 
@@ -75,4 +77,4 @@ def final_audio(text_doc,path="",lang=["en-US","en"]):
     concatenated_audio2.export(path+"output2.mp3",format="mp3")
 if __name__=="__main__":
     text=input()
-    final_audio(text)
+    final_audio(text,path="/home/aakriti/Documents/PROJECTS/kitaabghar/ai/")

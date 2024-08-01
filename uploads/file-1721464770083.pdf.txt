@@ -1,0 +1,107 @@
+CSE 2012 Design and Analysis of
+Algorithms
+Practice Problem Sheet 1
+Practice makes you Perfect
+Inputs required for PPS1
+ Chapter 123 of CLRS book
+ Design of the Algorithm for sorting in an increasing order by
+insertion and the analysis of the insertionsort algorithm
+Design of Algorithm
+ Understand the problem
+ Develop the logic to solve the problem
+ Validate the logicdeveloped by you with simple illustration
+ Write the pseudocode
+Analysis of Algorithm
+ Proof of Correctness PoC of the algorithm
+ Computation of running time Tn
+ Bestcase averagecase running and worstcase
+ Timecomplexity of the algorithm Expression of asymptotic growth
+ofTn with θ O Ω o ω notations
+Note Every question should answer the design and analysis
+component of the algorithm Design component should involve all
+the steps described as above Analysis component should involve
+all the steps described as above
+1 Consider arranging nnumbers stored in an array A by first find
+ing the smallest element of A and exchanging it with the ele
+ment in A1 Then find the second smallest element of Aand
+exchange it with A2 continue in this manner for the first  n12
+elements Based on the approach described above write an algo
+rithm for arranging the given nnumbers in an increasing order
+of the numbers Compute the bestcase running time worstcase
+running time and the averagecase running time of the algorithm
+Compare this algorithm with that of the insertionsort algortim
+based on the respective Tn Based on your analysis conclude
+which algorithm performs better for which type of inputs etc
+2 Consider sorting arranging in an increasing order nnumbers
+stored in an array A by repeatedly by swapping the adjacent
+elements that are not in an increasing order If Ai and Ai 1
+are such that Ai Ai 1 then Ai and Ai 1 shall be
+swapped Based on the approach described above write an algo
+rithm for arranging the given nnumbers in an increasing order
+of the numbers Compute the bestcase running time worstcase
+running time and the averagecase running time of the algorithm
+Compare this algorithm with that of the insertionsort algorithm
+and conclude which algorithm performs better for which type of
+inputs etc
+3 Consider an array of A123  n  be an array of ndistinct
+numbers If i  j andAi Aj then we call the the pair
+i j as an inversion of A For example the five inversions in
+the array A23861are 1 525343545
+Given an array of numbers design the pseudocode for comput
+ing the number of inversions in the array inversion algorithm
+Analyse the pseudocode of the inversion algorithm Compare the
+runningtime of insertionsort and the runningtime of inversion
+algorithm Is there anything similar between the insertionsort
+algorithm and the inversion algorithm
+4 A nonnegative integer n is given Design an algorithm to count
+all the solutions of the inequality x2y2 n where xandy
+are nonnegative integers The pseudocode should not use any
+operations with real numbers square roots etc Analyse the
+pseudocode designed by you
+5 Given the coefficients a0 a1  a nxandk design two different
+pseudocode to evaluate the polynomial
+Px nX
+k0akxk3
+ Both the pseudocodes should follow different logic You have
+to choose the logic in such a way that the running time of one
+of the pseudocode should be of linear time complexity Analyse
+both the pseudoocdes with all the components
+6 Given the values of the english letters lower case a b c d  x y z
+as 1234242526 respectively Given a word wwith finite
+number of english letters we define the value of a word  Vw
+as the sum of the value of the english letters that occur in the
+word If wgoodVw  7  15  15  4  41 Given nwords
+design an algorithm to arrange the given words in a decreasing
+order of their respective values Analyse your algorithm with all
+the required steps
+7 Given two numbers a and b we usually say that a is less than
+or equal to b denoted by ab if the value of a is smaller than
+or equal to b Here we define a new relation abin a different
+way as follows a is said to be less than or equal to b denoted
+byab if the last digit of a is less than or equal to the last
+digit of b For example 27 is less than 19 since 7 is less than 9
+29 and 39 are said to be equal 38 is greater than 102 Given n
+numbers design a pseudocode to arrange the given numbers in
+a decreasing order as per the order defined above For example
+Given the numbers 27391 55 124 Numbers in the decreasing
+order are  39 27551241
+Also analyze your algorithm with all the steps required
+8 Propose a problem and design an algorithm for the problem pro
+posed by you Compute the timecomplexity of your algorithm
+Now modify the algorithm by following a different logic for the
+same problem so that the modified algorithm is more efficient
+than the original algorithm List out the modifications done in
+the original algorithm that has improved the efficiency of the
+algorithm
+9 In the insertionsort algorithm A discussed in the class in lines
+57 we apply a linearsearch method to find the appropriate place
+forAi to be inserted Instead of a linearsearch method modify
+the algorithm A by using the binarysearch method instead
+of the linearsearch method to find the appropriate place for
+Ai to be inserted Let the modified algorithm be called as A
+Analyse both the algorithms AandAand conclude which is4
+more efficient In case you are not aware of the binarysearch
+method please learn yourself from CLRS book
+10 Express the function
+n31000100n2100n3
+in terms of all the five notations θ O Ω o ω

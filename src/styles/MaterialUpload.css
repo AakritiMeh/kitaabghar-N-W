@@ -1,0 +1,19 @@
+.textinput input{
+    border:2px solid black;
+    border-radius: 8px;
+    font-size: 24px;
+    padding:10px ;
+
+}
+
+.fileInput input{
+    border:2px solid black;
+    font-size: 24px;
+    padding: 10px;
+}
+
+.MaterialUpload{
+    display: flex;
+    flex-direction: column;
+    gap:10px;
+}

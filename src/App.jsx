@@ -8,16 +8,18 @@ import LandingPage from "./pages/LandingPage"
 import FileUploadToAi from "./pages/FileUploadToAi"
 import MaterialUpload from "./pages/MaterialUpload"
 import Navbar from "./components/Navbar"
+
 function App() {
   
 
   return (
     <>
     <Navbar />
-    <LandingPage />
+      <LandingPage />
       <FileUploadToAi />
       <AboutUsPage />
       <MaterialUpload />
+   
     </>
   )
 }

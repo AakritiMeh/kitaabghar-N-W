@@ -58,6 +58,6 @@ def anim():
     video = video.set_audio(audio)
 
     # Save the video to a file
-    video.write_videofile("output.mp4", fps=24, codec="mpeg4")
+    video.write_videofile("output.mp4", fps=24, audio_codec="aac")
 
     pygame.quit()

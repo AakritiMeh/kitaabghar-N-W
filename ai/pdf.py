@@ -6,7 +6,7 @@ import re
 file='eng1'
 #open the PDF file
 def pdf(file):
-    PDFfile = open(file+".pdf", 'rb')
+    PDFfile = open(file, 'rb')
 
     PDFfilereader = PyPDF2.PdfFileReader(PDFfile)
 
@@ -29,7 +29,7 @@ def pdf(file):
     import io
     from PIL import Image
     #open the file
-    pdf_file = fitz.open(file+".pdf")   
+    pdf_file = fitz.open(file)   
     #iterate over PDF pages
     for page_index in range(pdf_file.page_count):
         #get the page itself
